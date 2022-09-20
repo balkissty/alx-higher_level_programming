@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Solves the N-queens puzzle.
-Determines all possible solutions to placing N
-N non-attacking queens on an NxN chessboard.
+Determines all possible solutions to placing N in a
+non-attacking queens on an NxN chessboard.
 Example:
     $ ./101-nqueens.py N
 N must be an integer greater than or equal to 4.
@@ -16,7 +16,7 @@ import sys
 
 
 def initialize_board(n):
-    """Initialize an `n`x`n` sized chessboard with 0's."""
+    """Initializes an `n`x`n` sized chessboard with 0's."""
     board = []
     [board.append([]) for i in range(n)]
     [row.append(' ') for i in range(n) for row in board]
@@ -125,7 +125,7 @@ if __name__ == "__main__":
         print("N must be a number")
         sys.exit(1)
     if int(sys.argv[1]) < 4:
-        print("N must be at least 4")
+            print("N must be at least 4")
         sys.exit(1)
 
     board = initialize_board(int(sys.argv[1]))
